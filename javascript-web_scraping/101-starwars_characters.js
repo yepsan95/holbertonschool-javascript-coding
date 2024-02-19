@@ -12,7 +12,6 @@ request(apiURL, function (err, response, body) {
       if (err) {
         console.error(err);
       }
-	  setTimeout(1000);
       const character = JSON.parse(body);
       console.log(character.name);
     });
