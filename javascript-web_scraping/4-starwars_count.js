@@ -9,12 +9,12 @@ request(apiURL, function (err, response, body) {
   const jsonString = body;
   const films = JSON.parse(jsonString).results;
   let wedgeAntillesCount = 0;
-    for (const film of films) {
-      for (const character in film.characters) {
-        if (character.includes(`${characterId}`)) {
-          wedgeAntillesCount++;
-        }
+  films.forEach((film) => {
+    film.characters.forEach((character) => {
+      if (character.includes(`${characterId}`)) {
+        wedgeAntillesCount++;
       }
-    }
+    });
+  });
   console.log(wedgeAntillesCount);
 });
