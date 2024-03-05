@@ -53,6 +53,7 @@ function countStudents(path) {
         }
       }
     });
+    resolve();
   });
 
   // Finally, we return the promise.
