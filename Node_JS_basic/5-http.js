@@ -19,10 +19,10 @@ const app = http.createServer((req, res) => {
         res.writeHead(500, { 'Content-Type': 'text/plain' });
         res.end(`This is the list of our students\n${error.message}`);
       });
-    } else {
+    }
+  } else {
       res.writeHead(404, { 'Content-Type': 'text/plain' });
       res.end('Not found');
-    }
   }
 });
 
